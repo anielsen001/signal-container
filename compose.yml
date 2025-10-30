@@ -7,6 +7,7 @@ services:
     environment:
       DISPLAY:
     image: signal:latest
+    privileged: true
     volumes:
       # passing through this file allows opening windows from the container in your host computer
       - "/tmp/.X11-unix:/tmp/.X11-unix:rw"
