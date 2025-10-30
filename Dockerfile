@@ -11,6 +11,7 @@ RUN apt-get -y install  \
     gpg \
     wget \
     libasound2t64 \
+    libcanberra-gtk-module \
     libgl1 \
     libglx-mesa0 
 
