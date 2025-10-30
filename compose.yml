@@ -1,0 +1,18 @@
+services:
+  signal:
+    init: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      DISPLAY:
+    image: signal:latest
+    volumes:
+      # passing through this file allows opening windows from the container in your host computer
+      - "/tmp/.X11-unix:/tmp/.X11-unix:rw"
+      - "/run/dbus/system_bus_socket:/run/dbus/system_bus_socket"
+    network_mode: "host"
+    command:
+      - "signal-desktop"
+      - "--no-sandbox"
+    
