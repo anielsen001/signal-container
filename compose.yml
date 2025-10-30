@@ -11,6 +11,7 @@ services:
       # passing through this file allows opening windows from the container in your host computer
       - "/tmp/.X11-unix:/tmp/.X11-unix:rw"
       - "/run/dbus/system_bus_socket:/run/dbus/system_bus_socket"
+      - "/dev/dri:/dev/dri"
     network_mode: "host"
     command:
       - "signal-desktop"

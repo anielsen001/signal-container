@@ -9,7 +9,9 @@ RUN apt-get update && \
 RUN apt-get -y install  \
     gpg \
     wget \
-    libasound2t64
+    libasound2t64 \
+    libgl1 \
+    libglx-mesa0 
 
 RUN mkdir -p /opt/signal
 WORKDIR /opt/signal
