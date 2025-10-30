@@ -24,3 +24,5 @@ RUN cat signal-desktop.sources | tee /etc/apt/sources.list.d/signal-desktop.sour
 
 RUN apt-get update && apt-get -y install signal-desktop
 
+ENTRYPOINT ["signal-desktop","--no-sandbox"]
+
